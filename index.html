@@ -111,7 +111,8 @@ p{margin:0}
 /* clients */
 .clients{padding:2.4rem 0;border-bottom:1px solid var(--line)}
 .clients .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:2rem;align-items:center}
-.marq{min-width:0}
+.marq{min-width:0;contain:paint}
+html{overflow-x:clip}
 .clients .label{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;min-width:0}
 @media (max-width:980px){.clients .wrap{grid-template-columns:minmax(0,1fr)}}
 .clients .label{white-space:nowrap}
