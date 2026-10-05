@@ -147,6 +147,15 @@ html{overflow-x:clip}
 .sol-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.04);transition:opacity .7s var(--ease),transform 1.2s var(--ease)}
 .sol-stage img.on{opacity:1;transform:none}
 .sol-stage figcaption{position:absolute;left:1.2rem;bottom:1.2rem;background:rgba(251,250,247,.9);padding:.5rem .8rem;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.spec-wrap{overflow-x:auto;border:1px solid var(--line-2);background:var(--white)}
+table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:720px}
+.spec th,.spec td{padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.spec thead th{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);background:var(--paper-2);font-weight:700}
+.spec tr.grp th{font-family:var(--display);font-size:1.05rem;font-weight:400;color:var(--accent);background:var(--paper);padding-top:1.1rem}
+.spec td:first-child{font-weight:700}
+.spec td:nth-child(n+3){font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.spec td:nth-child(2){color:var(--ink-2)}
+.foot{font-size:.8rem;color:var(--muted);margin-top:.9rem;max-width:80ch}
 /* compare */
 .cmp{position:relative;aspect-ratio:16/8.5;overflow:hidden;user-select:none;touch-action:pan-y;background:#000;box-shadow:var(--shadow)}
 .cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -195,6 +204,7 @@ html{overflow-x:clip}
 .proj figure{margin:0;position:relative;overflow:hidden;background:var(--paper-3)}
 .proj figure.tall{grid-row:span 2}
 .proj img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3;transition:transform 1s var(--ease)}
+.proj figure:not(.tall) img{height:auto}
 .proj figure.tall img{aspect-ratio:auto;height:100%}
 .proj figure:hover img{transform:scale(1.05)}
 .proj figcaption{position:absolute;left:0;right:0;bottom:0;padding:2rem 1.1rem 1rem;background:linear-gradient(0deg,rgba(16,20,23,.85),transparent);color:#fff;font-size:.82rem;letter-spacing:.04em}
@@ -208,7 +218,7 @@ html{overflow-x:clip}
 /* residential */
 .res{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
 .res .pic{position:relative}
-.res .pic img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.res .pic img{width:100%;height:auto;display:block}
 .res .pic .chip{position:absolute;left:-1rem;bottom:1.5rem;background:var(--white);padding:1rem 1.2rem;border-left:4px solid var(--accent);box-shadow:var(--shadow)}
 .res .pic .chip b{display:block;font-family:var(--display);font-size:1.8rem;font-weight:300}
 .res .pic .chip span{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
@@ -289,7 +299,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
       <span class="t"><b>Palmetto Pro Tint</b><span>Architectural Films</span></span>
     </a>
     <nav aria-label="Primary"><ul class="nav-links">
-      <li><a href="#solutions">Solutions</a></li><li><a href="#study">Daylight Study</a></li><li><a href="#process">Process</a></li><li><a href="#projects">Projects</a></li><li><a href="#residential">Homes</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#solutions">Solutions</a></li><li><a href="#films">Films</a></li><li><a href="#study">Daylight Study</a></li><li><a href="#process">Process</a></li><li><a href="#projects">Projects</a></li><li><a href="#residential">Homes</a></li><li><a href="#contact">Contact</a></li>
     </ul></nav>
     <div style="display:flex;gap:.6rem;align-items:center">
       <a class="btn btn-nav" href="#contact">Request a site survey</a>
@@ -298,7 +308,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
   </div>
 </header>
 <div class="mobile-menu" id="mmenu">
-  <a href="#solutions">Solutions</a><a href="#study">Daylight Study</a><a href="#process">Process</a><a href="#projects">Projects</a><a href="#residential">Homes</a><a href="#contact">Contact</a>
+  <a href="#solutions">Solutions</a><a href="#films">Films</a><a href="#study">Daylight Study</a><a href="#process">Process</a><a href="#projects">Projects</a><a href="#residential">Homes</a><a href="#contact">Contact</a>
   <a class="btn btn-ink" href="#contact">Request a site survey</a>
 </div>
 
@@ -359,10 +369,45 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
   </div>
 </section>
 
+<section class="sec" id="films" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="label num rv">02 · Film specifications</p><h2 class="rv d1">The Hüper Optik lines <em>we install.</em></h2></div>
+      <p class="rv d2">Manufacturer performance data, measured on 3 mm clear glass to ISO 9050 and ASHRAE. Dual-pane, low-e and tinted glass are modeled separately in your proposal.</p>
+    </div>
+    <div class="spec-wrap rv"><table class="spec">
+      <caption class="sr">Hüper Optik architectural film performance</caption>
+      <thead><tr><th>Film</th><th>Best for</th><th>VLT</th><th>TSER</th><th>IR rejected</th><th>Glare cut</th><th>UV</th></tr></thead>
+      <tbody>
+        <tr class="grp"><th colspan="7">Ceramic series · nano-ceramic, no metal, no dye, low reflectivity inside and out</th></tr>
+        <tr><td>Ceramic 70</td><td>Near-clear UV and heat, homes and lobbies</td><td>71%</td><td>48%</td><td>88%</td><td>20%</td><td>99.0%</td></tr>
+        <tr><td>Ceramic 60</td><td>Bright offices, retail with a view</td><td>60%</td><td>43%</td><td>60%</td><td>34%</td><td>99.9%</td></tr>
+        <tr><td>Ceramic 50</td><td>Balanced light and comfort</td><td>50%</td><td>50%</td><td>68%</td><td>45%</td><td>99.9%</td></tr>
+        <tr><td>Ceramic 40</td><td>West and south elevations</td><td>42%</td><td>55%</td><td>80%</td><td>53%</td><td>99.9%</td></tr>
+        <tr><td>Ceramic 35</td><td>Showrooms, conference rooms</td><td>34%</td><td>61%</td><td>81%</td><td>61%</td><td>99.9%</td></tr>
+        <tr><td>Ceramic 30</td><td>Hot exposures, screen-heavy rooms</td><td>30%</td><td>63%</td><td>86%</td><td>62%</td><td>99.9%</td></tr>
+        <tr><td>Ceramic 20</td><td>Maximum heat and glare control</td><td>21%</td><td>68%</td><td>91%</td><td>76%</td><td>99.9%</td></tr>
+        <tr class="grp"><th colspan="7">Select series · spectrally selective, precious-metal nano-stack, non-reflective</th></tr>
+        <tr><td>Select Drei</td><td>Highest heat rejection with natural light</td><td>35%</td><td>70%</td><td>98%</td><td>61%</td><td>99%</td></tr>
+        <tr><td>Select Sech</td><td>Keep the glass looking untreated</td><td>59%</td><td>54%</td><td>83%</td><td>34%</td><td>99%</td></tr>
+        <tr class="grp"><th colspan="7">Fusion series · dual-reflective, daytime privacy, low interior reflection at night</th></tr>
+        <tr><td>Fusion 28</td><td>Storefronts, street-facing offices</td><td>27%</td><td>65%</td><td>—</td><td>70%</td><td>99%</td></tr>
+        <tr><td>Fusion 20</td><td>Dealership showrooms, sun-facing façades</td><td>20%</td><td>69%</td><td>—</td><td>78%</td><td>99%</td></tr>
+        <tr><td>Fusion 10</td><td>Maximum privacy and heat rejection</td><td>11%</td><td>77%</td><td>—</td><td>88%</td><td>99%</td></tr>
+        <tr class="grp"><th colspan="7">ClearShield · optically clear safety and security, pairs with any solar film</th></tr>
+        <tr><td>ClearShield 4 mil</td><td>Accidental breakage, ground-floor glass</td><td>Clear</td><td>—</td><td>—</td><td>2%</td><td>99%</td></tr>
+        <tr><td>ClearShield 8 mil</td><td>Storms, vandalism, smash-and-grab</td><td>Clear</td><td>—</td><td>—</td><td>2%</td><td>99%</td></tr>
+        <tr><td>ClearShield 14 mil</td><td>Schools, public buildings, high-threat glass</td><td>Clear</td><td>—</td><td>—</td><td>2%</td><td>99%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="foot rv">Source: Hüper Optik USA published specifications (Ceramic data sheet; Select, Fusion and ClearShield product pages). VLT = visible light transmitted, TSER = total solar energy rejected. Dekorativ frosted films and Feather Friendly bird-safe markers are specified per project.</p>
+  </div>
+</section>
+
 <section class="sec" id="glare" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">02 · Before &amp; after</p><h2 class="rv d1">Same glass. <em>Same view.</em> Less heat.</h2></div>
+      <div><p class="label num rv">03 · Before &amp; after</p><h2 class="rv d1">Same glass. <em>Same view.</em> Less heat.</h2></div>
       <p class="rv d2">Drag across a dealership showroom we filmed. Spectrally selective ceramic film cuts the heat and glare that hits the sales floor while the cars stay visible from the lot.</p>
     </div>
     <div class="cmp rv" id="cmp" style="--x:52%">
@@ -385,21 +430,21 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 <section class="sec" id="study">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">03 · Daylight study</p><h2 class="rv d1">Put a number on <em>your</em> windows.</h2></div>
+      <div><p class="label num rv">04 · Daylight study</p><h2 class="rv d1">Put a number on <em>your</em> windows.</h2></div>
       <p class="rv d2">A rough model for the conversation. The site survey replaces it with an energy model on your exact glass, orientation and HVAC, plus measurement and verification after install.</p>
     </div>
     <div class="study rv">
       <div class="in">
         <div class="field"><label for="sqft">Glass area <output id="sqftOut">4,000 sq ft</output></label><input class="range" id="sqft" type="range" min="200" max="20000" step="100" value="4000"></div>
         <div class="field"><span class="lbl" id="expLbl">Primary exposure</span><div class="seg" role="group" aria-labelledby="expLbl"><button type="button" data-exp="1" aria-pressed="true">West</button><button type="button" data-exp=".85" aria-pressed="false">South</button><button type="button" data-exp=".8" aria-pressed="false">East</button><button type="button" data-exp=".45" aria-pressed="false">North</button></div></div>
-        <div class="field"><span class="lbl" id="filmLbl">Film</span><div class="seg three" role="group" aria-labelledby="filmLbl"><button type="button" data-film=".45" data-name="Neutral solar" aria-pressed="false">Neutral</button><button type="button" data-film=".62" data-name="Dual-reflective" aria-pressed="false">Dual-reflective</button><button type="button" data-film=".7" data-name="Ceramic spectrally selective" aria-pressed="true">Ceramic</button></div></div>
+        <div class="field"><span class="lbl" id="filmLbl">Film</span><div class="seg three" role="group" aria-labelledby="filmLbl"><button type="button" data-film=".55" data-glare="53" data-cost="7" aria-pressed="false">Ceramic 40</button><button type="button" data-film=".69" data-glare="78" data-cost="6.5" aria-pressed="false">Fusion 20</button><button type="button" data-film=".70" data-glare="61" data-cost="9" aria-pressed="true">Select Drei</button></div></div>
         <div class="field" style="margin-bottom:0"><label for="rate">Electric rate <output id="rateOut">$0.13 / kWh</output></label><input class="range" id="rate" type="range" min="9" max="20" step="1" value="13"></div>
       </div>
       <div class="out" aria-live="polite">
         <div><div class="big"><small>Estimated annual cooling savings</small><span id="oSave">$—</span></div></div>
-        <div class="row"><div><b id="oHeat">—</b><span>Solar heat rejected</span></div><div><b id="oGlare">—</b><span>Glare reduction</span></div></div>
-        <div class="row"><div><b id="oPay">—</b><span>Typical payback</span></div><div><b id="oFilm">Ceramic</b><span>Recommended film</span></div></div>
-        <small>Illustrative estimate using regional cooling-load assumptions. Not a quote. Your proposal includes a performance model, data-logged verification and an ROI calculation on your actual glass.</small>
+        <div class="row"><div><b id="oHeat">—</b><span>Total solar energy rejected</span></div><div><b id="oGlare">—</b><span>Glare reduction</span></div></div>
+        <div class="row"><div><b id="oPay">—</b><span>Typical payback</span></div><div><b id="oFilm">Select Drei</b><span>Film modeled</span></div></div>
+        <small>TSER and glare figures are Hüper Optik's published values on 3 mm clear glass. Dollar savings use a regional cooling-load assumption and are illustrative, not a quote. Your proposal includes a performance model on your actual glass, data-logged verification and an ROI calculation.</small>
         <a class="btn btn-light" href="#contact">Get the real numbers</a>
       </div>
     </div>
@@ -409,7 +454,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 <section class="sec" id="process" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">04 · Process</p><h2 class="rv d1">Engineered, <em>not eyeballed.</em></h2></div>
+      <div><p class="label num rv">05 · Process</p><h2 class="rv d1">Engineered, <em>not eyeballed.</em></h2></div>
       <p class="rv d2">Commercial glass is a system. We treat it like one: measure, model, spec, install after hours, verify. Nothing on your schedule changes except the thermostat.</p>
     </div>
     <div class="proc">
@@ -425,7 +470,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 <section class="sec" id="projects">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">05 · Projects</p><h2 class="rv d1">On glass across <em>Columbia and Lexington.</em></h2></div>
+      <div><p class="label num rv">06 · Projects</p><h2 class="rv d1">On glass across <em>Columbia and Lexington.</em></h2></div>
       <p class="rv d2">Dealership showrooms, engineering offices, bank branches, restaurants, a university, and the homes of the people who run them.</p>
     </div>
     <div class="proj">
@@ -443,7 +488,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 <section class="sec" id="industries" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">06 · Who we work with</p><h2 class="rv d1">Facilities teams, owners, <em>and the people in the building.</em></h2></div>
+      <div><p class="label num rv">07 · Who we work with</p><h2 class="rv d1">Facilities teams, owners, <em>and the people in the building.</em></h2></div>
     </div>
     <div class="ind">
       <div class="rv"><h3>Offices &amp; headquarters</h3><p>Glare off monitors, hot west-facing wings, conference-room privacy.</p></div>
@@ -462,7 +507,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
   <div class="wrap res">
     <div class="pic rv"><img src="assets/img/home-farmhouse.webp" alt="Modern farmhouse with residential window film on large front windows" loading="lazy" width="1600" height="1200"><div class="chip"><b>70%</b><span>Solar energy rejected</span></div></div>
     <div>
-      <p class="label num rv">07 · Homes</p>
+      <p class="label num rv">08 · Homes</p>
       <h2 class="rv d1">The sunroom you stopped <em>using in July.</em></h2>
       <p class="rv d2" style="color:var(--ink-2);margin-top:1rem">Hüper Optik nanotechnology residential films reduce the heat coming through your glass, reject 99.9% of ultraviolet light, and keep the view both ways. Low reflectivity at night means the window still looks like a window.</p>
       <ul class="rv d3">
@@ -478,7 +523,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 
 <section class="sec" id="faq" style="padding-top:0">
   <div class="wrap">
-    <div class="sec-head"><div><p class="label num rv">08 · Questions</p><h2 class="rv d1">What owners ask <em>before the survey.</em></h2></div></div>
+    <div class="sec-head"><div><p class="label num rv">09 · Questions</p><h2 class="rv d1">What owners ask <em>before the survey.</em></h2></div></div>
     <div class="faq">
       <div class="rv">
         <details open><summary>How does commercial window tint benefit my business?</summary><p>Commercial window tint reduces heat and glare, helps control energy costs, protects interiors from UV damage, and creates a more comfortable environment for employees and customers.</p></details>
@@ -499,7 +544,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
 <section class="sec" id="contact" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="label num rv">09 · Site survey</p><h2 class="rv d1">Tell us about <em>the glass.</em></h2></div>
+      <div><p class="label num rv">10 · Site survey</p><h2 class="rv d1">Tell us about <em>the glass.</em></h2></div>
       <p class="rv d2">A survey takes about an hour on site. You get the energy model, film recommendation and proposal within a week. No cost, no obligation.</p>
     </div>
     <div class="contact">
@@ -570,16 +615,16 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
   const cmp=$('#cmp'),cr=$('#cmpRange');
   cr.addEventListener('input',()=>cmp.style.setProperty('--x',cr.value+'%'));
   /* study */
-  const sq=$('#sqft'),sqO=$('#sqftOut'),rate=$('#rate'),rateO=$('#rateOut');let exp=1,film=.7,filmName='Ceramic';
+  const sq=$('#sqft'),sqO=$('#sqftOut'),rate=$('#rate'),rateO=$('#rateOut');let exp=1,film=.7,filmName='Select Drei',glare=61,cost=9;
   const fmt=n=>'$'+Math.round(n).toLocaleString();
   const calc=()=>{const a=+sq.value,r=+rate.value/100;sqO.textContent=a.toLocaleString()+' sq ft';rateO.textContent='$'+r.toFixed(2)+' / kWh';
     const kwhPerSqFt=40*exp;const baseCost=a*kwhPerSqFt*r;const save=baseCost*film*.55;
     $('#oSave').textContent=fmt(save*.85)+' – '+fmt(save*1.15);
-    $('#oHeat').textContent=Math.round(film*100)+'%';$('#oGlare').textContent=Math.round(50+film*45)+'%';
-    const cost=a*(film>=.7?9:film>=.6?7.5:6);const pay=cost/Math.max(save,1);$('#oPay').textContent=pay<1?'< 1 yr':pay.toFixed(1)+' yrs';$('#oFilm').textContent=filmName};
+    $('#oHeat').textContent=Math.round(film*100)+'%';$('#oGlare').textContent=glare+'%';
+    const total=a*cost;const pay=total/Math.max(save,1);$('#oPay').textContent=pay<1?'< 1 yr':pay.toFixed(1)+' yrs';$('#oFilm').textContent=filmName};
   sq.addEventListener('input',calc);rate.addEventListener('input',calc);
   $$('[data-exp]').forEach(b=>b.addEventListener('click',()=>{$$('[data-exp]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');exp=+b.dataset.exp;calc()}));
-  $$('[data-film]').forEach(b=>b.addEventListener('click',()=>{$$('[data-film]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');film=+b.dataset.film;filmName=b.textContent;calc()}));
+  $$('[data-film]').forEach(b=>b.addEventListener('click',()=>{$$('[data-film]').forEach(x=>x.setAttribute('aria-pressed','false'));b.setAttribute('aria-pressed','true');film=+b.dataset.film;glare=+b.dataset.glare;cost=+b.dataset.cost;filmName=b.textContent;calc()}));
   calc();
 })();
 </script>
