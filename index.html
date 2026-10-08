@@ -104,6 +104,7 @@ p{margin:0}
 .hero h1 em{font-weight:300}
 .hero .lead{font-size:clamp(1.02rem,1.3vw,1.18rem);color:var(--ink-2);max-width:36rem;margin-bottom:1.8rem}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:.7rem}
+.dealer{display:flex;align-items:center;gap:.8rem;margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--line);font-size:.85rem;color:var(--ink-2)}.dealer img{width:40px;height:40px;border-radius:8px;background:var(--ink);padding:6px}.dealer b{color:var(--ink)}
 .hero-side{display:grid;gap:1px;background:rgba(255,255,255,.25);border:1px solid rgba(255,255,255,.35)}
 .hside{padding:1.1rem 1.3rem;background:rgba(16,20,23,.6)}
 .hside b{display:block;font-family:var(--display);font-size:clamp(1.6rem,2.4vw,2.2rem);font-weight:300;line-height:1.1}
@@ -199,6 +200,8 @@ table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:720px}
 .pstep .k{font-family:var(--display);font-size:2.4rem;font-weight:300;color:var(--brass);line-height:1}
 .pstep h3{margin:.8rem 0 .5rem;font-size:1.15rem}
 .pstep p{font-size:.9rem;color:var(--ink-2)}
+.model{display:grid;grid-template-columns:.9fr 1.1fr;gap:3rem;align-items:center;margin-top:4rem}.model h3{font-size:clamp(1.5rem,2.6vw,2.2rem);margin:.6rem 0 .8rem}.model p:last-of-type{color:var(--ink-2);max-width:48ch}.legend{display:flex;gap:1.4rem;margin-top:1.2rem;font-size:.85rem;color:var(--ink-2)}.legend i{display:inline-block;width:14px;height:8px;border-radius:2px;margin-right:.5rem;vertical-align:middle}.chart-wrap{margin:0;background:var(--white);border:1px solid var(--line-2);padding:1.2rem 1.2rem .9rem}.chart{width:100%;height:auto;display:block;font-family:var(--body)}.chart-wrap figcaption{font-size:.76rem;color:var(--muted);margin-top:.6rem}
+@media (max-width:980px){.model{grid-template-columns:1fr}}
 /* projects */
 .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
 .proj figure{margin:0;position:relative;overflow:hidden;background:var(--paper-3)}
@@ -324,6 +327,7 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
         <a class="btn btn-ink" href="#contact">Request a site survey <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a class="btn btn-line" href="#study">Run a daylight study</a>
       </div>
+      <div class="dealer"><img src="assets/img/huper-optik.png" alt="" width="148" height="148"><span><b>Authorized Hüper Optik dealer</b><br>Manufacturer-backed warranty on every installation</span></div>
     </div>
     <div class="hero-side up u2">
       <div class="hside"><b>70%</b><span>Solar energy rejected</span></div>
@@ -463,6 +467,19 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
       <div class="pstep rv d2"><span class="k">3</span><h3>Proposal &amp; ROI</h3><p>Film options, projected savings, payback and the manufacturer's warranty terms in one document your board can read.</p></div>
       <div class="pstep rv d3"><span class="k">4</span><h3>After-hours install</h3><p>Licensed installers, nights and weekends. Clean edges, no disruption, no dust. Multi-site rollouts scheduled around you.</p></div>
       <div class="pstep rv d4"><span class="k">5</span><h3>Verify &amp; warranty</h3><p>Data-logged measurement and verification, then a manufacturer warranty registered to the building.</p></div>
+    </div>
+    <div class="model">
+      <div class="rv">
+        <p class="label num">What the proposal looks like</p>
+        <h3>A model, <em>not a guess.</em></h3>
+        <p>Every proposal carries a performance model built on your glass to ISO 9050 and ASHRAE. This sample shows relative solar heat gain by elevation for a west-facing office: clear 3 mm glass against Hüper Optik Ceramic 40, which takes the solar heat gain coefficient from 0.86 to 0.45. Your numbers replace these after the survey.</p>
+        <div class="legend"><span><i style="background:#D08A2E"></i>Clear glass</span><span><i style="background:#118A79"></i>Ceramic 40 applied</span></div>
+      </div>
+      <figure class="chart-wrap rv d1">
+        <svg class="chart" viewBox="0 0 640 300" role="img" aria-labelledby="chT chD"><title id="chT">Relative solar heat gain by elevation, clear glass versus Ceramic 40</title><desc id="chD">Grouped bars for west, south, east and north elevations. Clear glass versus Hüper Optik Ceramic 40 film, which cuts heat gain by about half on every elevation.</desc><line x1="44" x2="624" y1="254.0" y2="254.0" stroke="rgba(16,20,23,.1)" stroke-width="1"/><text x="36" y="258.0" text-anchor="end" font-size="11" fill="#5C666F">0</text><line x1="44" x2="624" y1="196.5" y2="196.5" stroke="rgba(16,20,23,.1)" stroke-width="1"/><text x="36" y="200.5" text-anchor="end" font-size="11" fill="#5C666F">25</text><line x1="44" x2="624" y1="139.0" y2="139.0" stroke="rgba(16,20,23,.1)" stroke-width="1"/><text x="36" y="143.0" text-anchor="end" font-size="11" fill="#5C666F">50</text><line x1="44" x2="624" y1="81.5" y2="81.5" stroke="rgba(16,20,23,.1)" stroke-width="1"/><text x="36" y="85.5" text-anchor="end" font-size="11" fill="#5C666F">75</text><line x1="44" x2="624" y1="24.0" y2="24.0" stroke="rgba(16,20,23,.1)" stroke-width="1"/><text x="36" y="28.0" text-anchor="end" font-size="11" fill="#5C666F">100</text><line x1="44" x2="624" y1="254" y2="254" stroke="rgba(16,20,23,.3)"/><path d="M77.5,254.0 V60.2 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#D08A2E"><title>86 relative heat gain</title></path><path d="M117.5,254.0 V154.5 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#118A79"><title>45 relative heat gain</title></path><text x="96.5" y="50.2" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">86</text><text x="136.5" y="144.5" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">45</text><text x="116.5" y="282" text-anchor="middle" font-size="12" fill="#3A434A">West</text><path d="M222.5,254.0 V89.9 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#D08A2E"><title>73 relative heat gain</title></path><path d="M262.5,254.0 V170.0 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#118A79"><title>38 relative heat gain</title></path><text x="241.5" y="79.9" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">73</text><text x="281.5" y="160.0" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">38</text><text x="261.5" y="282" text-anchor="middle" font-size="12" fill="#3A434A">South</text><path d="M367.5,254.0 V99.8 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#D08A2E"><title>69 relative heat gain</title></path><path d="M407.5,254.0 V175.2 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#118A79"><title>36 relative heat gain</title></path><text x="386.5" y="89.8" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">69</text><text x="426.5" y="165.2" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">36</text><text x="406.5" y="282" text-anchor="middle" font-size="12" fill="#3A434A">East</text><path d="M512.5,254.0 V169.0 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#D08A2E"><title>39 relative heat gain</title></path><path d="M552.5,254.0 V211.4 a4,4 0 0 1 4,-4 h30 a4,4 0 0 1 4,4 V254.0 Z" fill="#118A79"><title>20 relative heat gain</title></path><text x="531.5" y="159.0" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">39</text><text x="571.5" y="201.4" text-anchor="middle" font-size="11" font-weight="700" fill="#101417">20</text><text x="551.5" y="282" text-anchor="middle" font-size="12" fill="#3A434A">North</text></svg>
+        <figcaption>Relative solar heat gain index, 100 = west elevation, clear glass. Sample model; exposure factors are illustrative.</figcaption>
+        <table class="sr"><caption>Relative solar heat gain by elevation</caption><thead><tr><th>Elevation</th><th>Clear glass</th><th>Ceramic 40</th></tr></thead><tbody><tr><th scope="row">West</th><td>86</td><td>45</td></tr><tr><th scope="row">South</th><td>73</td><td>38</td></tr><tr><th scope="row">East</th><td>69</td><td>36</td></tr><tr><th scope="row">North</th><td>39</td><td>20</td></tr></tbody></table>
+      </figure>
     </div>
   </div>
 </section>
