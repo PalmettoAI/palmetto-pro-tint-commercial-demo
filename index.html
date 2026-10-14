@@ -214,9 +214,12 @@ table.spec{width:100%;border-collapse:collapse;font-size:.92rem;min-width:720px}
 .proj figcaption b{display:block;font-family:var(--display);font-size:1.15rem;font-weight:400;letter-spacing:0}
 /* industries */
 .ind{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
-.ind div{background:var(--paper);padding:1.6rem 1.4rem;transition:background .3s}
-.ind div:hover{background:var(--white)}
-.ind h3{font-size:1.2rem;margin-bottom:.4rem}
+.ind>div{background:var(--paper);transition:background .3s;overflow:hidden}
+.ind>div:hover{background:var(--white)}
+.ind img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;display:block;transition:transform .9s var(--ease)}
+.ind>div:hover img{transform:scale(1.05)}
+.ind .t{padding:1.2rem 1.3rem 1.4rem}
+.ind h3{font-size:1.15rem;margin-bottom:.4rem}
 .ind p{font-size:.88rem;color:var(--ink-2)}
 /* residential */
 .res{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
@@ -508,14 +511,14 @@ footer{background:var(--ink);color:rgba(255,255,255,.8);padding:4rem 0 2rem;marg
       <div><p class="label num rv">07 · Who we work with</p><h2 class="rv d1">Facilities teams, owners, <em>and the people in the building.</em></h2></div>
     </div>
     <div class="ind">
-      <div class="rv"><h3>Offices &amp; headquarters</h3><p>Glare off monitors, hot west-facing wings, conference-room privacy.</p></div>
-      <div class="rv d1"><h3>Auto dealerships</h3><p>Showroom heat and fading on the floor without hiding the inventory.</p></div>
-      <div class="rv d2"><h3>Healthcare &amp; medical</h3><p>Patient comfort, privacy frost, and safety film on entry glass.</p></div>
-      <div class="rv d3"><h3>Schools &amp; churches</h3><p>Security film on doors and ground-floor glass. Cooler classrooms.</p></div>
-      <div class="rv"><h3>Retail &amp; restaurants</h3><p>Smash-and-grab resistance, branded graphics, afternoon-sun dining rooms.</p></div>
-      <div class="rv d1"><h3>Banks &amp; government</h3><p>Safety, security and anti-graffiti on public-facing glass.</p></div>
-      <div class="rv d2"><h3>Property managers</h3><p>Multi-site rollouts, tenant complaints solved, energy line items reduced.</p></div>
-      <div class="rv d3"><h3>Homeowners</h3><p>Sunrooms, lake houses and west-facing living rooms. See below.</p></div>
+      <div class="rv"><img src="assets/img/office-building.webp" alt="Office building with solar control film" loading="lazy" width="1200" height="750"><div class="t"><h3>Offices &amp; headquarters</h3><p>Glare off monitors, hot west-facing wings, conference-room privacy.</p></div></div>
+      <div class="rv d1"><img src="assets/img/dealership-2.webp" alt="Dealership showroom glass" loading="lazy" width="1200" height="750"><div class="t"><h3>Auto dealerships</h3><p>Showroom heat and fading on the floor without hiding the inventory.</p></div></div>
+      <div class="rv d2"><img src="assets/img/glass-box-2.webp" alt="Frosted glass office walls" loading="lazy" width="1200" height="750"><div class="t"><h3>Healthcare &amp; medical</h3><p>Patient comfort, privacy frost, and safety film on entry glass.</p></div></div>
+      <div class="rv d3"><img src="assets/img/brick-entry.webp" alt="Brick building entrance with glass doors" loading="lazy" width="1200" height="750"><div class="t"><h3>Schools &amp; churches</h3><p>Security film on doors and ground-floor glass. Cooler classrooms.</p></div></div>
+      <div class="rv"><img src="assets/img/restaurant.webp" alt="Restaurant dining room with filmed windows" loading="lazy" width="1200" height="750"><div class="t"><h3>Retail &amp; restaurants</h3><p>Smash-and-grab resistance, branded graphics, afternoon-sun dining rooms.</p></div></div>
+      <div class="rv d1"><img src="assets/img/storefront-nationwide.webp" alt="Insurance office storefront" loading="lazy" width="1200" height="750"><div class="t"><h3>Banks &amp; government</h3><p>Safety, security and anti-graffiti on public-facing glass.</p></div></div>
+      <div class="rv d2"><img src="assets/img/highrise.webp" alt="High-rise building in Columbia" loading="lazy" width="1200" height="750"><div class="t"><h3>Property managers</h3><p>Multi-site rollouts, tenant complaints solved, energy line items reduced.</p></div></div>
+      <div class="rv d3"><img src="assets/img/home-brick.webp" alt="Brick home with large windows" loading="lazy" width="1200" height="750"><div class="t"><h3>Homeowners</h3><p>Sunrooms, lake houses and west-facing living rooms. See below.</p></div></div>
     </div>
   </div>
 </section>
